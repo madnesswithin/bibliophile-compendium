@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #121c17, #1e3323);
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #f4ecd8; /* Warm parchment white */
+}
+
+.glass-modal {
+  position: relative;
+  z-index: 10;
+  background: rgba(20, 35, 25, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  padding: 50px;
+  max-width: 650px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6), inset 0 0 20px rgba(212,175,55,0.05);
+  animation: modalFadeIn 1.2s ease-out forwards;
+}
+
+.compendium-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #d4af37; /* Matte Gold */
+  margin-top: 0;
+  margin-bottom: 35px;
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+  padding-bottom: 15px;
+}
+
+.quote-text {
+  font-size: 1.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.quote-author {
+  font-size: 1.1rem;
+  color: #a3b8a6; /* Soft sage green */
+  letter-spacing: 1px;
+}
+
+.tracker-section {
+  margin-top: 40px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #f4ecd8;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-family: 'Georgia', serif;
+  width: 60%;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus { border-color: rgba(212, 175, 55, 0.8); }
+input::placeholder { color: #6a7c6d; }
+
+button {
+  background: #d4af37;
+  color: #121c17;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover { background: #f0c954; transform: translateY(-2px); }
+
+.current-read {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #a3b8a6;
+}
+
+#current-book-display { color: #d4af37; font-weight: bold; font-style: italic; }
+
+/* Stardust Background Layer */
+.stardust {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background: #d4af37;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #d4af37, 0 0 12px rgba(212, 175, 55, 0.4);
+  opacity: 0;
+  animation: floatUp linear infinite, twinkle ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(110vh); }
+  to { transform: translateY(-10vh); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.8; }
+}

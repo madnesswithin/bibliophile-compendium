@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Bibliophile's Compendium",
+  "version": "1.0",
+  "description": "A magical new-tab reading tracker and quote display.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

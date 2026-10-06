@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Compendium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Container for dynamically generated CSS stardust -->
+  <div id="stardust-container" class="stardust"></div>
+  
+  <div class="glass-modal">
+    <h1 class="compendium-title">The Compendium</h1>
+    
+    <div class="quote-container">
+      <p id="quote-text" class="quote-text">Summoning the archives...</p>
+      <p id="quote-author" class="quote-author"></p>
+    </div>
+    
+    <div class="tracker-section">
+      <input type="text" id="book-input" placeholder="What tome are you currently exploring?">
+      <button id="save-book-btn">Mark Page</button>
+    </div>
+    <p class="current-read">Currently Charting: <span id="current-book-display">No journey recorded yet.</span></p>
+  </div>
+  
+  <script src="newtab.js"></script>
+</body>
+</html>
